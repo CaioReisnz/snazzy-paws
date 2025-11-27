@@ -1,0 +1,390 @@
+/* =============================
+    Reset Default Styles
+===============================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==============================
+    Body Styles
+=============================== */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fdfdfd;
+    color: #333;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+/* ===============================
+    Header & Navigation
+================================ */
+header {
+    background-color: #2a0d8f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Navigation Menu */
+nav ul {
+    margin-bottom: 30px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a:hover {
+    color: #2a9d8f;
+    text-decoration: underline;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    text-decoration: underline;
+}
+
+/* ============================
+   Home page hero section
+============================= */
+
+body.home .hero-container {
+    animation: fadeIn 1s ease-in-oout;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body.home .home-hero {
+    background: linear-gradient(to bottom, #e0f7f5, #ffffff);
+    padding: 40px 0;
+    background-color: #e0f7f5;
+    padding: 40px 0;
+}
+
+body.home .home-hero .hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Home section hero image */
+body.home .home-hero img{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto px;
+    border-radius: 10px;
+
+    border: 5px solid #2a9d8f;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Home section text */
+body.home .home-hero h2 {
+    margin-bottom: 10px;
+    color: #264653;
+    font-size: 2rem;
+}
+
+body.home .home-hero p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #2a9d8f;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    background-color: #21867a;
+}
+
+
+/*==============================
+    Services Page Table
+=============================== */
+body.services table{
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+body.services th,
+body.services td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+body services th {
+    background-color: #2a9d8f;
+    color: white;
+    font-weight: bold;
+}
+
+body.services tr:nth-child(even) {
+    background-color: #f0f7f7
+}
+
+body.services tr:hover {
+    background-color: #d0e6e6;
+}
+
+body.services .services-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #264653
+}
+
+/* =============================
+    Gallery Page
+=============================== */
+body.gallery .gallery-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 15px;
+    text-align: center;
+}
+
+body.gallery .gallery-section h2 {
+    margin-bottom: 30px;
+    color: #263653;
+    font-size: 2rem;
+}
+
+body.gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+body.gallery .gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #2a9d8f;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3 ease;
+}
+
+body.gallery .gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* =============================
+    Booking Page
+=============================== */
+body.booking .booking-section {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f0f4f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.14);
+}
+
+body.booking .booking-section h2 {
+    text-align:center;
+    color: #264653;
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+body.booking .booking-form {
+    display:flex;
+    flex-direction: column;
+}
+
+body.booking .booking-form label {
+    margin-bottom: 5px;
+    font-weight:bold;
+    color: #264653
+}
+
+body.booking .booking-form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #2a9d8f;
+    border-radius: 5px;
+    font-size: 1irem;
+}
+
+body.booking .booking-form input:focus {
+    outline: none;
+    border-color: #e76f51;
+}
+
+body.booking .booking-form button {
+    padding: 12px;
+    background-color: #2a9d8f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+body.booking .booking-form button:hover {
+    background-color: #264653;
+    transform: scale(1.03);
+}
+
+/* =============================
+    Contact Page
+=============================== */
+
+body.contacts {
+    background: #faf7f5
+}
+
+.contact-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #c08497;
+}
+
+.map-container {
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    text-align: left;
+    font-weight: bold;
+    color: #444;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #c08497;
+    border-color: #c08497;
+}
+
+.contact-form button {
+    background: #c08497;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+contact.form button:hover {
+    background: #a96c82;
+}
+
+/* =============================
+    Footer
+============================== */
+footer {
+    background-color: #264653;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* ===============================
+    Responsive Design
+=============================== */
+@media (max-width: 900px) {
+    body.gallery .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    body.home .home-hero .hero-container,
+    body.services .services-section,
+    body.gallery .gallery-section {
+        padding: 15px;
+        width: 95%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }    
+}
+
+@media (max-width: 500px) {
+    body.gallery .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    body.booking .booking-section {
+        margin: 20px;
+        padding: 15px;
+    }
+}
